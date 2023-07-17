@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
 for tens_digit in range(10):
-        print("{:02d}".format(tens_digit * 10 + units_digit), end=", " if tens_digit < 8 else "\n")
+    for units_digit in range(tens_digit + 1, 10):
+        print("{:d}{:d}".format(tens_digit, units_digit), end=", " if tens_digit < 8 else "{:d}{:d}\n".format(tens_digit, units_digit))
